@@ -1,4 +1,5 @@
 package com.azzouz.bsapi.controllers;
+
 import com.azzouz.bsapi.entities.Provider;
 import com.azzouz.bsapi.repositories.ProviderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ import java.util.Optional;
 public class ProviderController {
 
     @Autowired
-        private ProviderRepository providerRepository;
+    private ProviderRepository providerRepository;
 
     @GetMapping("/list")
     public List<Provider> getAllProviders() {
@@ -28,8 +29,7 @@ public class ProviderController {
     }
 
     @PutMapping("/{providerId}")
-    public Provider updateProvider(@PathVariable Long providerId, @Valid
-    @RequestBody Provider providerRequest) {
+    public Provider updateProvider(@PathVariable Long providerId, @Valid @RequestBody Provider providerRequest) {
         return providerRepository.findById(providerId).map(provider -> {
             provider.setName(providerRequest.getName());
             provider.setEmail(providerRequest.getEmail());
