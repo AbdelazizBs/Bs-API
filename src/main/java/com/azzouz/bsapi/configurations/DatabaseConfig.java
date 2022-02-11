@@ -1,4 +1,4 @@
-package com.azzouz.bsapi.configurations;
+/*package com.azzouz.bsapi.configurations;
 import com.zaxxer.hikari.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
@@ -13,4 +13,4 @@ public class DatabaseConfig {
         config.setJdbcUrl(dbUrl);
         return new HikariDataSource(config);
     }
-}
+}*/
